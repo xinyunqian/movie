@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170414094349) do
+ActiveRecord::Schema.define(version: 20170414104749) do
 
   create_table "groups", force: :cascade do |t|
     t.text     "电影名称"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170414094349) do
     t.integer  "上映年份"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,5 +1,14 @@
 <div class="col-md-12">
   <div class="group">
+
+    <span class="pull-right">
+      <% if current_user && current_user.is_member_of?(@group) %>
+        <label class="label label-success"> 已看过该影片 </label>
+      <% else %>
+        <label class="label label-warning"> 未看过该影片 </label>
+      <% end %>
+    </span>
+
     <%= link_to("编辑该影片", edit_group_path(@group), class: "btn btn-primary pull-right")%>
   </div>
   <h2><%= @group.电影名称 %></h2>

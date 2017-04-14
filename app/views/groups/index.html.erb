@@ -8,6 +8,7 @@
         <td>电影名称</td>
         <td>电影类型</td>
         <td>上映年份</td>
+        <td>创建人</td>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
           <td><%= link_to(group.电影名称, group_path(group)) %></td>
           <td><%= group.电影类型 %></td>
           <td><%= group.上映年份 %></td>
+          <td> <%= group.user.email %> </td>
           <td>
               <%= link_to("编辑信息", edit_group_path(group), class: "btn btn-sm btn-default")%>
               <%= link_to("删除", group_path(group),    class: "btn btn-sm btn-default",

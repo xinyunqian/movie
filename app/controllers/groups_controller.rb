@@ -47,6 +47,6 @@ class GroupsController < ApplicationController
 
 
   def group_params
-    params.require(:group).permit(:title, :description)
+    params.require(:group).permit(:电影名称, :电影类型, :上映年份)
   end
 end

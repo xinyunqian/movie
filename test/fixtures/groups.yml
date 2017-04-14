@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  电影名称: MyText
+  电影类型: MyText
+  上映年份: 1
+
+two:
+  电影名称: MyText
+  电影类型: MyText
+  上映年份: 1

@@ -19,8 +19,8 @@
           <td><%= group.上映年份 %></td>
           <td> <%= group.user.email %> </td>
           <td>
-            <% if current_user && current_user == group.user %>
               <%= link_to("编辑信息", edit_group_path(group), class: "btn btn-sm btn-default")%>
+              <% if current_user && current_user == group.user %>
               <%= link_to("删除", group_path(group),    class: "btn btn-sm btn-default",
                           method: :delete, data: { confirm: "一旦删除将无法找回，确认要删除吗?" } )%>
             <% end %>

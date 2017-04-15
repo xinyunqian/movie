@@ -15,7 +15,7 @@
       <% @groups.each do |group| %>
         <tr>
           <td><%= link_to(group.电影名称, group_path(group)) %></td>
-          <td><%= group.电影类型 %></td>
+          <td><%= render_group_description(group) %></td>
           <td><%= group.上映年份 %></td>
           <td> <%= group.user.email %> </td>
           <td>

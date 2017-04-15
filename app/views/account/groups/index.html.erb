@@ -1,0 +1,28 @@
+<div class="col-md-12">
+
+  <h2 class="text-center"> 我看过的电影 </h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th> 电影名称 </th>
+        <th> 电影类型 </th>
+        <th> 上映年份 </th>
+        <th> 评论数 </th>
+        <th> 最近更新 </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @groups.each do |group| %>
+        <tr>
+          <td> <%= link_to(group.电影名称, group_path(group)) %> </td>
+          <td> <%= group.电影类型 %> </td>
+          <td> <%= group.上映年份 %> </td>
+          <td> <%= group.posts.count %> </td>
+          <td> <%= group.updated_at %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
